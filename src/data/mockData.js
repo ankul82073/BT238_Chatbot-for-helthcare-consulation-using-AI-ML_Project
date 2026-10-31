@@ -1,0 +1,330 @@
+// =============================================================
+// MOCK DATA — all fictional demo data for the application
+// =============================================================
+
+export const recentConsultations = [
+  {
+    id: 1,
+    date: '2026-10-25',
+    symptoms: ['Headache', 'Fatigue'],
+    status: 'Reviewed',
+    summary: 'General tension headache — rest and hydration recommended.',
+    category: 'General',
+  },
+  {
+    id: 2,
+    date: '2026-10-20',
+    symptoms: ['Cough', 'Sore Throat'],
+    status: 'Reviewed',
+    summary: 'Upper respiratory symptoms — warm fluids and rest advised.',
+    category: 'Respiratory',
+  },
+  {
+    id: 3,
+    date: '2026-10-15',
+    symptoms: ['Nausea', 'Stomach Discomfort'],
+    status: 'Reviewed',
+    summary: 'Possible indigestion — bland diet recommended.',
+    category: 'Digestive',
+  },
+  {
+    id: 4,
+    date: '2026-10-10',
+    symptoms: ['Back Pain'],
+    status: 'Reviewed',
+    summary: 'Musculoskeletal discomfort — posture correction and gentle stretching.',
+    category: 'Musculoskeletal',
+  },
+]
+
+export const SYMPTOMS_LIST = [
+  'Headache', 'Cough', 'Fever', 'Sore Throat', 'Fatigue',
+  'Nausea', 'Stomach Discomfort', 'Back Pain', 'Dizziness',
+  'Shortness of Breath', 'Runny Nose', 'Chest Pain',
+  'Muscle Aches', 'Skin Rash', 'Loss of Appetite',
+  'Joint Pain', 'Sneezing', 'Vomiting', 'Diarrhoea',
+  'Difficulty Sleeping',
+]
+
+export const DURATIONS = [
+  'Less than 1 day',
+  '1–3 days',
+  '3–7 days',
+  '1–2 weeks',
+  'More than 2 weeks',
+]
+
+export const SEVERITIES = [
+  { label: 'Mild', value: 'mild', color: 'bg-green-100 text-green-700 border-green-300' },
+  { label: 'Moderate', value: 'moderate', color: 'bg-yellow-100 text-yellow-700 border-yellow-300' },
+  { label: 'Severe', value: 'severe', color: 'bg-red-100 text-red-700 border-red-300' },
+]
+
+export const AGE_RANGES = [
+  'Under 18', '18–30', '31–45', '46–60', '60+', 'Prefer not to say',
+]
+
+export const SYMPTOM_ASSESSMENT_RESULTS = {
+  mild: {
+    level: 'Low Concern',
+    color: 'green',
+    icon: '✓',
+    summary: 'Your reported symptoms appear to be mild in nature. Based on general health information, these types of symptoms are often associated with common conditions that tend to resolve with adequate rest, hydration, and basic self-care.',
+    selfCare: [
+      'Get adequate rest (7–9 hours of sleep)',
+      'Stay well-hydrated (8–10 glasses of water daily)',
+      'Eat light, nutritious meals',
+      'Avoid strenuous physical activity until you feel better',
+      'Monitor your symptoms and note any changes',
+    ],
+  },
+  moderate: {
+    level: 'Moderate Attention',
+    color: 'yellow',
+    icon: '!',
+    summary: 'Your reported symptoms are of moderate severity. While many moderate symptoms can be managed with self-care, it would be advisable to monitor them closely and consider consulting a healthcare professional if they do not improve.',
+    selfCare: [
+      'Rest and limit physical activity',
+      'Maintain good hydration',
+      'Take note of when symptoms worsen or improve',
+      'Consider consulting a general physician if symptoms persist beyond 3–5 days',
+      'Follow a balanced diet and avoid potential irritants',
+    ],
+  },
+  severe: {
+    level: 'Seek Medical Attention',
+    color: 'red',
+    icon: '⚠',
+    summary: 'Your reported symptoms are described as severe. It is strongly recommended that you consult a qualified healthcare professional promptly. Severe symptoms warrant professional medical evaluation.',
+    selfCare: [
+      'Contact a healthcare provider as soon as possible',
+      'Rest and avoid all strenuous activity',
+      'Stay hydrated if able to do so',
+      'Do not ignore or try to self-treat severe symptoms',
+      'Have someone accompany you if you seek in-person care',
+    ],
+  },
+}
+
+// DOCTORS DATA
+export const SPECIALTIES = [
+  { id: 'all', label: 'All Specialties', icon: '🏥' },
+  { id: 'general', label: 'General Physician', icon: '👨‍⚕️' },
+  { id: 'dermatology', label: 'Dermatology', icon: '🩺' },
+  { id: 'pediatrics', label: 'Pediatrics', icon: '👶' },
+  { id: 'cardiology', label: 'Cardiology', icon: '❤️' },
+  { id: 'neurology', label: 'Neurology', icon: '🧠' },
+  { id: 'orthopedics', label: 'Orthopedics', icon: '🦴' },
+]
+
+export const DOCTORS = [
+  {
+    id: 1,
+    name: 'Dr. Priya Sharma',
+    specialty: 'general',
+    specialtyLabel: 'General Physician',
+    experience: '12 years',
+    qualification: 'MBBS, MD (General Medicine)',
+    rating: 4.8,
+    reviews: 156,
+    consultationType: 'In-person & Online',
+    availability: 'Mon–Fri, 9am–6pm',
+    location: 'New Delhi',
+    about: 'Specializes in preventive medicine and chronic disease management. Known for patient-centred care.',
+  },
+  {
+    id: 2,
+    name: 'Dr. Arjun Mehta',
+    specialty: 'cardiology',
+    specialtyLabel: 'Cardiologist',
+    experience: '18 years',
+    qualification: 'MBBS, DM (Cardiology)',
+    rating: 4.9,
+    reviews: 203,
+    consultationType: 'In-person',
+    availability: 'Mon, Wed, Fri, 10am–4pm',
+    location: 'Mumbai',
+    about: 'Expert in interventional cardiology and heart failure management.',
+  },
+  {
+    id: 3,
+    name: 'Dr. Kavya Nair',
+    specialty: 'dermatology',
+    specialtyLabel: 'Dermatologist',
+    experience: '9 years',
+    qualification: 'MBBS, MD (Dermatology)',
+    rating: 4.7,
+    reviews: 128,
+    consultationType: 'In-person & Online',
+    availability: 'Tue–Sat, 11am–7pm',
+    location: 'Bengaluru',
+    about: 'Specializes in acne, eczema, and cosmetic dermatology.',
+  },
+  {
+    id: 4,
+    name: 'Dr. Rohit Verma',
+    specialty: 'pediatrics',
+    specialtyLabel: 'Paediatrician',
+    experience: '14 years',
+    qualification: 'MBBS, MD (Paediatrics)',
+    rating: 4.9,
+    reviews: 312,
+    consultationType: 'In-person',
+    availability: 'Mon–Sat, 9am–5pm',
+    location: 'Hyderabad',
+    about: 'Passionate about child health, vaccination, and developmental paediatrics.',
+  },
+  {
+    id: 5,
+    name: 'Dr. Ananya Krishnan',
+    specialty: 'neurology',
+    specialtyLabel: 'Neurologist',
+    experience: '16 years',
+    qualification: 'MBBS, DM (Neurology)',
+    rating: 4.8,
+    reviews: 178,
+    consultationType: 'In-person & Online',
+    availability: 'Mon–Thu, 10am–5pm',
+    location: 'Chennai',
+    about: 'Expert in migraine, epilepsy, and neurodegenerative conditions.',
+  },
+  {
+    id: 6,
+    name: 'Dr. Sameer Gupta',
+    specialty: 'orthopedics',
+    specialtyLabel: 'Orthopaedic Surgeon',
+    experience: '20 years',
+    qualification: 'MBBS, MS (Orthopaedics)',
+    rating: 4.7,
+    reviews: 241,
+    consultationType: 'In-person',
+    availability: 'Tue, Thu, Sat, 9am–3pm',
+    location: 'Pune',
+    about: 'Specializes in joint replacement, sports injuries, and spine care.',
+  },
+]
+
+// HEALTH INSIGHTS DATA
+export const INSIGHT_CATEGORIES = [
+  { id: 'all', label: 'All Topics' },
+  { id: 'wellness', label: 'Wellness' },
+  { id: 'prevention', label: 'Prevention' },
+  { id: 'nutrition', label: 'Nutrition' },
+  { id: 'mental', label: 'Mental Health' },
+  { id: 'sleep', label: 'Sleep' },
+]
+
+export const HEALTH_INSIGHTS = [
+  {
+    id: 1,
+    category: 'wellness',
+    title: 'The Importance of Daily Hydration',
+    summary: 'Water is essential for nearly every bodily function. Learn how staying hydrated supports energy, cognition, and organ health.',
+    readTime: '3 min read',
+    content: `Adequate hydration is fundamental to good health. The human body is approximately 60% water, and even mild dehydration can affect physical performance and concentration.\n\n**Recommended intake:** Around 2–3 litres per day for adults, though this varies based on activity level, climate, and individual needs.\n\n**Signs of dehydration:** Dark urine, dry mouth, fatigue, headache, reduced concentration.\n\n**Tips to stay hydrated:**\n• Start your day with a glass of water\n• Carry a reusable water bottle\n• Eat water-rich foods (cucumbers, watermelon, oranges)\n• Set reminders if you tend to forget`,
+    icon: 'Droplets',
+    color: 'blue',
+  },
+  {
+    id: 2,
+    category: 'sleep',
+    title: 'Sleep Hygiene for Better Rest',
+    summary: 'Quality sleep is a cornerstone of physical and mental wellbeing. Discover evidence-based strategies for healthier sleep.',
+    readTime: '4 min read',
+    content: `Adults need 7–9 hours of quality sleep per night. Poor sleep is linked to increased risk of cardiovascular disease, obesity, and mental health conditions.\n\n**Sleep hygiene practices:**\n• Keep a consistent sleep-wake schedule (even on weekends)\n• Create a dark, cool, quiet sleep environment\n• Avoid screens for 1 hour before bed (blue light disrupts melatonin)\n• Limit caffeine after 2 PM\n• Avoid heavy meals close to bedtime\n\n**Wind-down routine ideas:**\n• Light reading\n• Gentle stretching or yoga\n• Deep breathing or meditation\n• Warm bath or shower`,
+    icon: 'Moon',
+    color: 'indigo',
+  },
+  {
+    id: 3,
+    category: 'prevention',
+    title: 'Hand Hygiene: Your First Line of Defence',
+    summary: 'Proper hand washing is one of the most effective ways to prevent the spread of infections and illness.',
+    readTime: '2 min read',
+    content: `According to health authorities worldwide, hand washing with soap and water for at least 20 seconds is one of the most effective public health interventions available.\n\n**When to wash hands:**\n• Before and after eating\n• After using the toilet\n• After coughing, sneezing, or blowing your nose\n• After touching public surfaces\n• After handling animals\n\n**Correct technique (WHO 6-step method):**\n1. Wet hands with clean water\n2. Apply sufficient soap\n3. Rub palms together\n4. Rub between fingers and dorsal surfaces\n5. Clean thumbs and fingertips\n6. Rinse thoroughly and dry with a clean towel`,
+    icon: 'HandMetal',
+    color: 'teal',
+  },
+  {
+    id: 4,
+    category: 'nutrition',
+    title: 'Balanced Nutrition: Building a Healthy Plate',
+    summary: 'Understanding macronutrients, micronutrients, and practical meal planning for sustained energy and health.',
+    readTime: '5 min read',
+    content: `A balanced diet provides the nutrients your body needs to function optimally. No single food contains all essential nutrients — variety is key.\n\n**The basics of a balanced plate:**\n• **Half your plate** — fruits and vegetables (colour variety)\n• **Quarter** — whole grains (brown rice, oats, whole wheat)\n• **Quarter** — lean protein (legumes, fish, eggs, poultry)\n• **Plus** — healthy fats (nuts, seeds, olive oil, avocado)\n\n**Key nutrients to monitor:**\n• Iron — leafy greens, legumes, lean meat\n• Calcium — dairy or fortified plant milks, leafy greens\n• Vitamin D — sunlight, fortified foods, fatty fish\n• B12 — meat, dairy, eggs (or supplements for vegans)`,
+    icon: 'Apple',
+    color: 'green',
+  },
+  {
+    id: 5,
+    category: 'mental',
+    title: 'Managing Everyday Stress',
+    summary: 'Practical, evidence-based strategies for recognising and managing stress to protect your mental and physical health.',
+    readTime: '4 min read',
+    content: `Chronic stress has significant effects on both mental and physical health, contributing to anxiety, depression, cardiovascular disease, and immune dysfunction.\n\n**Recognising stress signals:**\n• Persistent worry or irritability\n• Physical tension (headaches, muscle tightness)\n• Disrupted sleep or appetite\n• Difficulty concentrating\n\n**Evidence-based coping strategies:**\n• **Deep breathing** — 4-7-8 technique (inhale 4s, hold 7s, exhale 8s)\n• **Physical activity** — even a 20-minute walk reduces cortisol\n• **Mindfulness meditation** — apps like Headspace or Calm\n• **Social connection** — talk to someone you trust\n• **Journaling** — writing down worries can externalise them\n• **Limit news and social media** — set specific times to check`,
+    icon: 'Brain',
+    color: 'purple',
+  },
+  {
+    id: 6,
+    category: 'wellness',
+    title: 'When to Seek Medical Advice',
+    summary: 'A practical guide to understanding which symptoms warrant prompt medical attention versus those suitable for self-care.',
+    readTime: '3 min read',
+    content: `Knowing when to see a doctor is an important health literacy skill. Not all symptoms require immediate care, but some warning signs should never be ignored.\n\n**See a doctor within 24–48 hours for:**\n• Fever above 38.5°C (101.3°F) lasting more than 3 days\n• Symptoms that are worsening rather than improving\n• Significant pain that doesn't respond to basic care\n• Symptoms interfering with eating, sleeping, or daily function\n\n**Go to an emergency department or call emergency services for:**\n• Chest pain or pressure\n• Difficulty breathing or shortness of breath\n• Sudden severe headache\n• Loss of consciousness or confusion\n• Signs of stroke (FAST: Face drooping, Arm weakness, Speech difficulty, Time to call)\n• Severe allergic reaction (throat swelling, anaphylaxis)`,
+    icon: 'AlertCircle',
+    color: 'red',
+  },
+]
+
+// HEALTH HISTORY DATA (stored in state/localStorage)
+export const INITIAL_HISTORY = [
+  {
+    id: 1,
+    date: '2026-10-25',
+    time: '14:32',
+    type: 'Symptom Check',
+    symptoms: ['Headache', 'Fatigue'],
+    duration: '1–3 days',
+    severity: 'Mild',
+    status: 'Completed',
+    category: 'General',
+    summary: 'Mild tension headache with fatigue. Self-care measures recommended.',
+  },
+  {
+    id: 2,
+    date: '2026-10-20',
+    time: '10:15',
+    type: 'AI Chat Consultation',
+    symptoms: ['Cough', 'Sore Throat'],
+    duration: '3–7 days',
+    severity: 'Moderate',
+    status: 'Completed',
+    category: 'Respiratory',
+    summary: 'Upper respiratory symptoms. Warm fluids, rest, and monitoring advised.',
+  },
+  {
+    id: 3,
+    date: '2026-10-15',
+    time: '16:45',
+    type: 'Symptom Check',
+    symptoms: ['Nausea', 'Stomach Discomfort'],
+    duration: 'Less than 1 day',
+    severity: 'Mild',
+    status: 'Completed',
+    category: 'Digestive',
+    summary: 'Mild digestive discomfort. Bland diet and hydration recommended.',
+  },
+  {
+    id: 4,
+    date: '2026-10-10',
+    time: '09:00',
+    type: 'Symptom Check',
+    symptoms: ['Back Pain', 'Muscle Aches'],
+    duration: '1–2 weeks',
+    severity: 'Moderate',
+    status: 'Completed',
+    category: 'Musculoskeletal',
+    summary: 'Musculoskeletal discomfort. Posture correction and gentle stretching advised.',
+  },
+]
